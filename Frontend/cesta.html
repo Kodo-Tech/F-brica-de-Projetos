@@ -40,7 +40,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Doar 1 cesta</h5>
                         <p class="card-text mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione voluptates ut culpa quisquam delectus iure? Molestias quo commodi nisi quis maiores ut, eos magni tempora aperiam voluptates in doloribus consectetur?</p>
-                        <a href="#" class="btn btn-primary">Doar por pix</a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Doar por pix
+                        </button>
                     </div>
                 </div>
             </div>
@@ -53,7 +55,9 @@
                     <div class="card-body">
                         <h5 class="card-title">Doar 2 Cestas</h5>
                         <p class="card-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque ex qui beatae suscipit a doloribus aspernatur error nam nesciunt, maiores similique, consequatur dolore quibusdam! Ipsam earum optio dicta error.</p>
-                        <a href="#" class="btn btn-primary">Doar por pix</a>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          Doar por pix
+                        </button>
                     </div>
                 </div>
             </div>
@@ -79,15 +83,16 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Realizar doação</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="modal-body cen">
+          <p>Utilize o Código QR abaixo para realizar o pagamento:</p><br/>
+          <img class="qr-code" src="./img/qrcode.png" alt="QR Code">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Doar por pix</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <!-- <button type="button" class="btn btn-primary">Doar por pix</button> -->
         </div>
       </div>
     </div>
