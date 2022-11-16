@@ -10,5 +10,5 @@ export class DonorDto {
 
     phone: string;
 
-    donations: DonationDto[];
+    donations?: DonationDto[];
 }
