@@ -18,7 +18,7 @@ a {
   color: #53C79E;
 }
 
-body {
+body{
   padding-top: 5vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
   background-color: #53C79E;
@@ -107,4 +107,43 @@ width: 90%;
 
 .template {
   display: none;
+}
+
+/* logo foodshare */
+h2 {
+  color: #00baf2;
+  font-weight: bold;
+}
+
+h2 span {
+  color: #53C79E;
+}
+.btn{
+  margin:10px;
+  background-color:#53C79E;
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto;
+  width: 170px;
+  padding: 9px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+.box-btn{
+  margin: auto;
+
+}
+.nav-item:hover{
+  background-color: #53C79E;
+  margin-left: 10px;
+  border-radius: 10px;
+  
+}
+.nav-link{
+  color: black;
+}
+.nav-link:hover{
+  color: black;
 }
