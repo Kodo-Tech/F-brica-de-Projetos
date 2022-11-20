@@ -21,8 +21,11 @@ h2 span{
     color: #53C79E;
 }
 .modal-body{
-    margin: auto;
-    background-color: #00baf2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
 }
 .btn{
     
