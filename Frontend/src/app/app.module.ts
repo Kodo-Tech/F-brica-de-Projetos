@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { DoacoesComponent } from './doacoes/doacoes.component';
+import { DoacaoModalComponent } from './doacao-modal/doacao-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     HomeComponent,
     PerfilComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    DoacoesComponent,
+    DoacaoModalComponent
   ],
   imports: [
     BrowserModule,
