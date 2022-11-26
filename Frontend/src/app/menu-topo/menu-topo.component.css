@@ -47,13 +47,6 @@ h2 span {
   border-bottom: 5px solid #000000;
 }
 
-.menu .active a,
-.menu li a:hover {
-  color: #ccc;
-  border-bottom: 5px solid #00baf2;
-}
-
-
 .banner {
   height: calc(100vh - 300px);
   background-color: #333;
@@ -300,11 +293,16 @@ h2 span {
 
 .nav-item:hover{
   background-color: #53C79E;
-  margin-left: 10px;
+  margin-left: 20px;
   border-radius: 10px; 
 }
 .nav-link{
   color: black;
+}
+a{
+  text-decoration: none;
+  margin-left: 40px;
+  padding: 10px;
 }
 .nav-link:hover{
   color: black;
@@ -314,3 +312,4 @@ h2 span {
   border-radius: 10px;
   background-color: #53C79E;
 }
+

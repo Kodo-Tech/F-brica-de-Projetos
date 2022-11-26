@@ -10,7 +10,10 @@ export class MenuTopoComponent implements OnInit {
   menus: any = [
     { rota: "home", titulo: "Home" },
     { rota: "perfil", titulo: "Perfil" },
-    { rota: "sobre-nos", titulo: "Sobre nós" },
+    { rota: "login", titulo: "Login" },
+    { rota: "sobre-nos", titulo: "Sobre" },
+    { rota: "doacoes", titulo: "Doações" },
+    { rota: "login", titulo: "Sair" },
   ];
 
   constructor() { }
