@@ -11,7 +11,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { DoacoesComponent } from './doacoes/doacoes.component';
-import { DoacaoModalComponent } from './doacao-modal/doacao-modal.component';
+import { DoacaoModalComponent } from './doacoes/doacao-modal/doacao-modal.component';
 
 @NgModule({
   declarations: [

@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Doar 1 cesta</h5>
                         <p class="card-text mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione voluptates ut culpa quisquam delectus iure? Molestias quo commodi nisi quis maiores ut, eos magni tempora aperiam voluptates in doloribus consectetur?</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button (click)="abrirModal()" type="button" class="btn btn-primary">
                           Doar por pix
                         </button>
                     </div>
@@ -23,7 +23,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Doar 2 Cestas</h5>
                         <p class="card-text mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque ex qui beatae suscipit a doloribus aspernatur error nam nesciunt, maiores similique, consequatur dolore quibusdam! Ipsam earum optio dicta error.</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button (click)="abrirModal()" type="button" class="btn btn-primary">
                           Doar por pix
                         </button>
                     </div>
@@ -42,10 +42,10 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis neque ex qui beatae suscipit a doloribus aspernatur error nam nesciunt, maiores similique, consequatur dolore quibusdam! Ipsam earum optio dicta error.
                         </p>
                     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Doar por pix
-  </button>
-  
+                        <button (click)="abrirModal()" type="button" class="btn btn-primary">
+                          Doar por pix
+                        </button>
+                          
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
