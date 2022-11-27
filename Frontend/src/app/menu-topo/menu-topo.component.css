@@ -293,7 +293,6 @@ h2 span {
 
 .nav-item:hover{
   background-color: #53C79E;
-  margin-left: 20px;
   border-radius: 10px; 
 }
 .nav-link{
@@ -311,5 +310,8 @@ a{
   margin-left: 5px;
   border-radius: 10px;
   background-color: #53C79E;
+}
+.btn{
+  color: #fff;
 }
 

@@ -15,6 +15,7 @@ export class MenuTopoComponent implements OnInit {
     { rota: "doacoes", titulo: "Doações" },
     { rota: "login", titulo: "Sair" },
   ];
+  
 
   constructor() { }
 

@@ -14,7 +14,8 @@ export class LoginComponent implements OnInit {
   autenticado: boolean;
   
   constructor(public doadorService: DoadorService) { }
-
+  cadastro: any = [{ rota:"cadastro", titulo: "cadastro" }]
+ 
   ngOnInit(): void {
     
   }
