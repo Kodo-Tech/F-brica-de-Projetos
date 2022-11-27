@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, NotFoundException, Param, Post, Put, Query } from '@nestjs/common';
 import Donor from './entities/donor.entity';
 import { DonorService } from './donor.service';
 import { DonorDto } from './dto/donor.dto';
@@ -12,21 +12,27 @@ export class DonorController {
     @ApiOperation({ description: "Lists all the donors registered on the database" })
     @ApiOkResponse({ description: 'The resources were returned successfully' })
     @Get()
-    async getDonors(): Promise<Donor[]> {
+    async getDonors(@Query('id') id: number, @Query('email') email: string): Promise<Donor[] | Donor> {
         try {
+            if(id) {
+                return this.donorService.getDonor(id);
+            }
+            if(email) {
+                return this.donorService.getDonorByEmail(email);
+            }
             return await this.donorService.getDonors();
         } catch(err) {
             console.log(err);
         }
     }
 
-    @ApiOperation({ description: "Lists a specific donor registered on the database" })
+    @ApiOperation({ description: "Lists a specific donor registered on the database filtered by email." })
     @ApiOkResponse({ description: 'The resources were returned successfully' })
     @ApiNotFoundResponse({ description: 'Resource not found' })
-    @Get('/:id')
-    async getDonor(@Param('id') id: number): Promise<Donor> {
+    @Get()
+    async getDonorByEmail(@Query('email') email: string): Promise<Donor> {
         try {
-            return await this.donorService.getDonor(id);
+            return await this.donorService.getDonorByEmail(email);
         } catch(err) {
             throw new NotFoundException("Doador não encontrado.");
         }

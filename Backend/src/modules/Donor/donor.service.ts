@@ -20,6 +20,11 @@ export class DonorService {
         return donor;
     }
 
+    async getDonorByEmail(email: string): Promise<Donor> {
+        const donor = await this.dataSource.query(`SELECT * FROM donor WHERE email = '${email}'`)
+        return donor;
+    }
+
     async createDonor(donor: DonorDto): Promise<void> {
         await this.donorRepository.save(donor);
     }

@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { DoacoesComponent } from './doacoes/doacoes.component';
 import { DoacaoModalComponent } from './doacoes/doacao-modal/doacao-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { DoacaoModalComponent } from './doacoes/doacao-modal/doacao-modal.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
