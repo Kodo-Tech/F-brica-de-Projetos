@@ -18,4 +18,8 @@ export class DoadorService {
     }
     return this.http.get(`${environment.urlAPI}/donors`);
   } 
+
+  cadastrarDoador(doador) {
+    return this.http.post(`${environment.urlAPI}/donors`, doador);
+  }
 }

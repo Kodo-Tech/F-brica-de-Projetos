@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DoadorService } from '../services/doador-service.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   senha: string;
   autenticado: boolean;
   
-  constructor(public doadorService: DoadorService) { }
+  constructor(public doadorService: DoadorService, private route: Router) { }
   cadastro: any = [{ rota:"cadastro", titulo: "cadastro" }]
  
   ngOnInit(): void {
@@ -40,6 +41,9 @@ export class LoginComponent implements OnInit {
           else if(this.email == data[0].email && this.senha != data[0].password) {
             alert('Senha incorreta!');
             return;
+          }
+          else {
+            this.route.navigate(["doacoes"]);
           }
         });
       } catch(err) {
