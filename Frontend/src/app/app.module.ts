@@ -14,6 +14,7 @@ import { DoacoesComponent } from './doacoes/doacoes.component';
 import { DoacaoModalComponent } from './doacoes/doacao-modal/doacao-modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,9 @@ import { FormsModule } from '@angular/forms';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
