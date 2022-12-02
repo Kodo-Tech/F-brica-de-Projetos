@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-menu-topo',
@@ -7,19 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuTopoComponent implements OnInit {
 
-  menus: any = [
+  menusAuth: any = [
     { rota: "home", titulo: "Home" },
-    { rota: "login", titulo: "Login" },
+    // { rota: "login", titulo: "Login" },
     { rota: "perfil", titulo: "Perfil" },
     { rota: "doacoes", titulo: "Fazer doação" },
     { rota: "sobre-nos", titulo: "Sobre o projeto" },
     { rota: "login", titulo: "Sair" },
   ];
-  
 
-  constructor() { }
+  menusNotAuth: any = [
+    { rota: "home", titulo: "Home" },
+    { rota: "sobre-nos", titulo: "Sobre o projeto" },
+    { rota: "login", titulo: "Login" }
+  ]
+  
+  autenticado: boolean;
+
+  constructor(private loginComponent: LoginComponent) { }
 
   ngOnInit(): void {
+    this.autenticado = this.loginComponent.autenticado;
   }
 
 }
