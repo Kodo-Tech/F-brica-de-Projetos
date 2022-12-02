@@ -16,7 +16,6 @@ export class PerfilComponent implements OnInit {
   ngOnInit(): void {
     this.buscarDoador();
   }
-
   buscarDoador() {
     this.doadorService.obterDoador(1).subscribe((data) => {
       this.doacoes = data['donations'];
