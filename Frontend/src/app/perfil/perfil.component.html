@@ -1,41 +1,48 @@
 
-  <div class="container"  >
-    <h2 style="padding:28px; width:40%; margin-left:40%;">Doações de Ronaldo:</h2>
-    <table class="table" style="width:80%; margin-left:20%;background-color: #f8f8f8; border-radius: 10px;">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Doação</th>
-            <th scope="col">Instituição</th>
-            <th scope="col">Data</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>2 cestas</td>
-            <td>ajuda Brasil</td>
-            <td>20/12/2017</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>2 cestas</td>
-            <td>ajuda Brasil</td>
-            <td>10/12/2020</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>2 cestas</td>
-            <td>ajuda Brasil</td>
-            <td>12/02/2019</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>2 cestas</td>
-            <td>ajuda Brasil</td>
-            <td>19/08/2018</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="containerEx ">
+  <h1 style="padding:50px;text-align: center;">Doações de {{ doador }}:</h1>
+  <div class="container" style="margin-left: 450px; margin-right: auto;">
+  <table class="table table-striped table-dark mt-4" style="width:80%; background-color: #f8f8f8; border-radius: 10px;">
+      <thead>
+        <tr class="table-success">
+          <th scope="col">Id</th>
+          <th scope="col">Data de Criação</th>
+          <th scope="col">Qtd Cestas</th>
+          <th scope="col">Valor da Doação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let doacao of doacoes">
+          <td>{{ doacao.id }}</td>
+          <td>{{ doacao.created_at }}</td>
+          <td>{{ doacao.foodBasketQty }}</td>
+          <td>R$ {{ doacao.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 style="padding:50px; text-align: center; margin-right: 300px;">Progresso de suas doações:</h1>
+  </div>   
+    <div class="row">
+      <div class="col-md-12">
+        <div align="center">
+          <circle-progress [percent]="15"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
+            [animationDuration]="1000"></circle-progress>
+        </div>    
+      </div>
+      <div class="col-md-12">
+        <div align="center">
+          <circle-progress [percent]="15" [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
+            [animationDuration]="1000"></circle-progress>
+        </div>    
+      </div>
+      <div class="col-md-12">
+        <div align="center">
+          <circle-progress [percent]="15"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+            [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
+            [animationDuration]="1000"></circle-progress>
+        </div>    
+      </div>
     </div>
-   
+</div>

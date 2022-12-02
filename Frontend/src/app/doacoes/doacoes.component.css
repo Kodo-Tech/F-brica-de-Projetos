@@ -10,7 +10,7 @@ i {
 .containerEx {
   height: 100vh;
   width: 100vw;
-  background-color: rgb(14, 34, 10);
+  background-color: rgb(84, 125, 95);
 
 }
 main{
@@ -20,7 +20,8 @@ main{
 }
 
 h1 {
-  color: #00baf2;
+  color: #27b3de;
+  font-weight: bold;
 }
 
 

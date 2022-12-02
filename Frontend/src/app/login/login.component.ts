@@ -12,22 +12,23 @@ export class LoginComponent implements OnInit {
   email: string;
   id: number; 
   senha: string;
-  autenticado: boolean;
+  autenticado: boolean = true;
+  doador: any;
   
   constructor(public doadorService: DoadorService, private route: Router) { }
   cadastro: any = [{ rota:"cadastro", titulo: "cadastro" }]
  
   ngOnInit(): void {
-    
+
   }
 
   login() {
-    var doador: any;
     if(!this.email || !this.senha) {
       alert("Por favor, preencha os dois campos.");
     }
     if(this.id) {
-      doador = this.doadorService.obterDoador(this.id).subscribe((data: any) => {
+      this.doadorService.obterDoador(this.id).subscribe((data: any) => {
+        this.doador = data[0];
         console.log(data[0].id);
       });
     }
@@ -43,6 +44,8 @@ export class LoginComponent implements OnInit {
             return;
           }
           else {
+            this.autenticado = true;
+            console.log(this.autenticado);
             this.route.navigate(["doacoes"]);
           }
         });

@@ -3,8 +3,14 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  .containerEx {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(84, 125, 95);
+  }
   
-  h2 {
+  h1 {
     color: #00baf2;
     font-weight: bold;
   }
