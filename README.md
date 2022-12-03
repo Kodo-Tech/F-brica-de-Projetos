@@ -29,37 +29,37 @@ Para o desenvolvimento do projeto, nós utilizamos algumas das tecnologias mais 
 
 ## __Telas do Projeto__:
 
-### __Tela de Login:__
+### **Tela de Login:**
 <img src="./img/login.png">
 Esta é a tela de login do projeto Food Share: Brasil.  
 
 <br> 
 
-### __Tela de Cadastro:__
+### **Tela de Cadastro:**
 <img src="./img/cadastro.png">
 Esta é a tela de cadastro do projeto Food Share: Brasil. Nela nossos doadores podem efetuar o cadastro e posteriormente acessar a plataforma.
 
 <br>
 
-### __Tela Home:__
+### **Tela Home:**
 <img src="./img/home.png">
 Esta tela possui o intuito de apresentar os objetivos e metas do projeto Food Share: Brasil da perspectiva dos desenvolvedores (equipe Kodo Technology).
 
 <br> 
 
-### __Tela de Doação:__
+### **Tela de Doação:**
 <img src="./img/doacao.png">
 Nesta tela nossos doadores podem escolher qual será a opção de doação, podendo ser de uma, duas ou três cestas básicas que terão seus valores convertidos para dinheiro em reais, e então o doador poderá finalizar a doação pagando o valor no PIX.
 
 <br> 
 
-### __Tela de Perfil:__
+### **Tela de Perfil:**
 <img src="./img/perfil.png">
 Nesta tela o doador pode consultar suas doações já realizadas e também o seu progresso como doador. Conforme o doador realiza suas doações, ele também estará participando de um processo gamificado para resgatar prêmios dentro da plataforma.
   
 <br>
 
-### __Tela Sobre o Projeto:__
+### **Tela Sobre o Projeto:**
 <img src="./img/sobre.png">
 Para acessar esta tela, o doador não irá precisar estar autenticado no sistema. O intuito dela é apresentar para nossos doadores nossa missão, visão e valores.  
 
