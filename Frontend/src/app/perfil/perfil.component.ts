@@ -10,6 +10,8 @@ export class PerfilComponent implements OnInit {
 
   doacoes: any = [];
   doador: any;
+  titleShirt: string = "Camisa Food Share";
+  titlePrize: string = "Brindes Food Share";
 
   constructor(private doadorService: DoadorService) { }
 
@@ -17,11 +19,19 @@ export class PerfilComponent implements OnInit {
     this.buscarDoador();
   }
   buscarDoador() {
-    this.doadorService.obterDoador(1).subscribe((data) => {
+    this.doadorService.obterDoador(20).subscribe((data) => {
       this.doacoes = data['donations'];
+      console.log(data['donations'][0]['created_at']);
       this.doador = data['name'];
       console.log(data['donations']);
     })
+  }
+
+  formataData(data: string) {
+    var dateSplited = data.split('T')[0];
+    const [year, month, day] = dateSplited.split('-') 
+    const dateFormated = `${day}/${month}/${year}`;
+    return dateFormated;
   }
 
 }

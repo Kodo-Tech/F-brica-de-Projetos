@@ -1,5 +1,5 @@
 
-<div class="containerEx ">
+<div class="containerEx">
   <h1 style="padding:50px;text-align: center;">Doações de {{ doador }}:</h1>
   <div>
     <div class="d-flex justify-content-center">
@@ -15,7 +15,7 @@
         <tbody>
           <tr *ngFor="let doacao of doacoes">
             <td>{{ doacao.id }}</td>
-            <td>{{ doacao.created_at }}</td>
+            <td>{{ formataData(doacao.created_at) }}</td>
             <td>{{ doacao.foodBasketQty }}</td>
             <td>R$ {{ doacao.value }}</td>
          </tr>
@@ -23,27 +23,27 @@
       </table>
     </div>
 <div class="row">
-<h1 style="padding:50px; text-align: center; margin-right: 300px;">Progresso de suas doações:</h1>
+<h1 class="mt-5" style="padding:40px; text-align: center; margin-right: 300px;">Progresso de suas doações:</h1>
 </div>
   </div>   
-    <div class="row">
+    <div class="row mt-5 pb-md-5">
       <div class="col-4">
         <div align="center">
-          <circle-progress [percent]="15"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+          <circle-progress [percent]="100" [subtitle]="'5 doações'" [space]="-10" [radius]="100" [outerStrokeWidth]="10"
             [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
             [animationDuration]="1000"></circle-progress>
         </div>    
       </div>
       <div class="col-4">
         <div align="center">
-          <circle-progress [percent]="15" [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+          <circle-progress [percent]="50" [title]="titleShirt" [subtitle]="'10 doações'" [space]="-10" [radius]="100" [outerStrokeWidth]="10"
             [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
             [animationDuration]="1000"></circle-progress>
         </div>    
       </div>
       <div class="col-4">
         <div align="center">
-          <circle-progress [percent]="15"  [space]="-10" [radius]="100" [outerStrokeWidth]="10"
+          <circle-progress [percent]="0" [title]="titlePrize" [subtitle]="'20 doações'" [space]="-10" [radius]="100" [outerStrokeWidth]="10"
             [innerStrokeWidth]="10" [outerStrokeColor]="'#4882c2'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
             [animationDuration]="1000"></circle-progress>
         </div>    
