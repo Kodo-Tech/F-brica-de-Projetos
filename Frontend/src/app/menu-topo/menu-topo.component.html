@@ -1,0 +1,17 @@
+<div>
+  <header id="header" class="d-flex flex-wrap justify-content-center  py-1  ">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <h2>Food Share <span>Brasil</span></h2>
+    </a>
+    <ul *ngIf="autenticado" class="nav nav-pills py-3 px-5" style="margin:0px;">
+      <li *ngFor="let item of menusAuth" >
+        <a [routerLink]="[item.rota]" style="color:black;"aria-current="page" class="nav-item">{{item.titulo}}</a>
+      </li>
+    </ul>
+    <ul *ngIf="!autenticado" class="nav nav-pills py-3 px-5" style="margin:0px;">
+      <li *ngFor="let item of menusNotAuth" >
+        <a [routerLink]="[item.rota]" style="color:black;"aria-current="page" class="nav-item">{{item.titulo}}</a>
+      </li>
+    </ul>
+  </header>
+</div>
